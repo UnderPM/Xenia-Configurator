@@ -9,18 +9,10 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
-                <MenuItem Header="_New Preset">
-                    
-                </MenuItem>
-                <MenuItem Header="_Save Preset">
-
-                </MenuItem>
-                <MenuItem Header="_Load Preset">
-
-                </MenuItem>
-                <MenuItem Header="Restore to _Default">
-                    
-                </MenuItem>
+                <MenuItem Header="_New Preset" />
+                <MenuItem Header="_Save Preset" />
+                <MenuItem Header="_Load Preset" Click="MenuFileLoad" />
+                <MenuItem Header="Restore to _Default" />
             </MenuItem>
         </Menu>
         <Grid>

@@ -24,5 +24,20 @@ namespace Xenia_Configurator
         {
             InitializeComponent();
         }
+
+        private Toml toml = new Toml();
+        
+        private void MenuFileLoad(object sender, RoutedEventArgs eventArgs)
+        {
+            Microsoft.Win32.OpenFileDialog fileDialog = new Microsoft.Win32.OpenFileDialog();
+            fileDialog.Filter = "Xenia Config Files|*.config.toml";
+            fileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Xenia";
+            if (fileDialog.ShowDialog() == true)
+            {
+                toml.Read(fileDialog.FileName);
+                MessageBox.Show(toml.GetTest());
+            }
+            MessageBox.Show(fileDialog.InitialDirectory);
+        }
     }
 }
