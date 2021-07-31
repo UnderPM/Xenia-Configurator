@@ -35,9 +35,9 @@ namespace Xenia_Configurator
             if (fileDialog.ShowDialog() == true)
             {
                 toml.Read(fileDialog.FileName);
-                MessageBox.Show(toml.GetTest());
+                
             }
-            MessageBox.Show(fileDialog.InitialDirectory);
+            //MessageBox.Show(fileDialog.InitialDirectory);
         }
     }
 }

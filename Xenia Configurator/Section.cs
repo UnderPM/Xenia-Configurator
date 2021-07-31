@@ -5,6 +5,12 @@
         private string name;
         private string[][] values;
 
+        public Section(string name, string[][] values)
+        {
+            SetName(name);
+            SetValues(values);
+        }
+
         public string GetName()
         {
             return name;
